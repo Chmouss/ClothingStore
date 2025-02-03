@@ -7,7 +7,7 @@ class Clothing(db.Model):
     size = db.Column(db.String(100), nullable=False)
     img_url = db.Column(db.String(200), nullable=True)
     price = db.Column(db.Integer, nullable=False)
-    gender = db.Column(db.String(100), nullable=False)
+    gender = db.Column(db.String(100), nullable=True)
 
 
     def to_json(self):

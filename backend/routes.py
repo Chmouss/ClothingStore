@@ -15,16 +15,16 @@ def create_cloth():
     try:
         data = request.json
 
-        required_fields = ["name", "description", "size", "price", "gender"]
+        required_fields = ["name", "description", "size", "price"]
         for field in required_fields:
-            if field not in data:
+            if field not in data or not data.get(field):
                 return jsonify({"error":f'missing required field: {field}'}), 400
 
         name = data.get("name")
         description = data.get("description")
         size = data.get("size")
         price = data.get("price")
-        gender = data.get("gender")
+        gender = "male"
         
         #placeholder here, find clothing image
         if gender == "male":
@@ -39,7 +39,7 @@ def create_cloth():
         db.session.add(new_cloth)
         db.session.commit()
 
-        return jsonify({"msg": "clothing created successfully"}), 201
+        return jsonify(new_cloth.to_json()), 201
     
     except Exception as e:
         db.session.rollback()

@@ -5,7 +5,7 @@ import {  } from "@chakra-ui/react";  // Utilisation de useColorMode pour gérer
 import CreateClothing from "./CreateClothing";
 import { useColorMode, useColorModeValue } from "./ui/color-mode";
 
-const Navbar = () => {
+const Navbar = ({setUsers}) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   // Utilisation de useColorModeValue pour ajuster les styles en fonction du mode
@@ -42,7 +42,7 @@ const Navbar = () => {
             </Button>
 
             {/* Add clothing button */}
-            <CreateClothing />
+            <CreateClothing setUsers={setUsers} />
           </Flex>
         </Flex>
       </Box>
