@@ -12,21 +12,22 @@ const ClothesCard = ({clothes}) => {
           <Flex flex={1} gap={4} alignItems={"center"}>
             <Avatar src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXqUCZKvwI0mWTC032Pf5vX-0-caDS1hlDhA&s" />
             <Box>
-              <Heading size="sm">{clothes.name}</Heading>
+              <Heading size="md">{clothes.name}</Heading>
               <Text>{clothes.size}</Text>
             </Box>
           </Flex>
           <Flex>
             <DialogRoot>
               <DialogBody>
-                <EditClothesPopup />
+                <EditClothesPopup clothes={clothes} />
               </DialogBody>
             </DialogRoot>
             <IconButton
               variant="ghost"
               colorScheme="red"
-              size="sm"
+              size="md"
               aria-label="Delete"
+              marginTop={"7px"}
             >
               <BiTrash />
             </IconButton>
