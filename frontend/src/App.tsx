@@ -28,7 +28,7 @@ function App() {
             </Text>
             */}
             <Text as={"span"}> 
-              placeholder title 
+              Clothing Shop
             </Text>
             🎃
           </Text>

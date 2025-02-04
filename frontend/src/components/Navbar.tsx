@@ -24,10 +24,11 @@ const Navbar = ({setUsers}) => {
             display={{base:"none", sm:"flex"}}
           >
             <img src="/vet1.png" alt="vet1 logo" width={50} height={50} />
-            <Text fontSize={"40px"} color={textColor}>+</Text>
+            <Text fontSize={"30px"} color={textColor} marginRight={"20px"}>all </Text>
             <img src="/vet2.png" alt="vet2 logo" width={50} height={50} />
-            <Text fontSize={"40px"} color={textColor}>=</Text>
-            <img src="/vet3.png" alt="vet3 logo" width={50} height={50} />
+            <Text fontSize={"30px"} color={textColor} marginRight={"20px"}>shoes </Text>
+            <img src="/vet4.png" alt="vet3 logo" width={50} height={50} />
+            <Text fontSize={"30px"} color={textColor} marginRight={"20px"}>t-shirts </Text>
           </Flex>
 
           {/* Right side */}
