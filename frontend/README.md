@@ -1,11 +1,23 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite + Python + Flask
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to setup the project -->
+Open 2 terminals (frontend and backend)
+'cd .\frontend\' on the first terminal
+'cd .\backend\' in the second one
 
-Currently, two official plugins are available:
+# frontend terminal ==> 
+- 'npm install' (for node modules)
+- 'npm run dev' (starts the frontend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# backend terminal ==>
+- 'python -m venv venv' (to create the virtual env to install dependencies in the virtual env and not instead of installing them on the machine(computer))
+- '.\venv\Scripts\activate' (activate the virtual environment on WINDOWS => linux command : source venv/bin/activate )
+- 'pip install flask flask-sqlalchemy flask-cors'
+  (flask is the framework that we will use for the REST APIbackend, 
+  flask sqlalchemy (ORM) => python toolkit that allows us to access databases with python code instead of SQL, 
+  flask cors to remove the CORS errors)
+- 'flask run --reload' (starts the backend and --reload for the hot reload)
+
 
 ## Expanding the ESLint configuration
 
